@@ -12,11 +12,7 @@ pipeline{
                 sh 'python3 data_analysis.py'
             }
         }
-        stage("Data Preprocessing"){
-            steps{
-                sh 'python3 data_preprocess.py'
-            }
-        }
+        
         stage("Data Visualization"){
             steps{
                 sh 'python3 datavisualization.py'
@@ -31,7 +27,7 @@ pipeline{
     post{
        
         always {
-            archiveArtifacts artifacts: 'student_performance_cleansed_data.csv', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'oil_field_cleansed_data.csv', onlyIfSuccessful: true
         }
             }
 }
