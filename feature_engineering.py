@@ -43,7 +43,7 @@ def feature_engineering():
     data_balanced = pd.concat([offshore_over,onshore], axis=0)
     data_balanced['Onshore/Offshore'].groupby(data_balanced['Onshore/Offshore']).count()
     print(data_balanced['Onshore/Offshore'].value_counts())
-    data_balanced.to_csv('oil_field_cleansed_data.csv')
+    data_balanced.to_csv('oil_field_cleansed_data.csv',index=False)
 
     #data_balanced.copy()
 
