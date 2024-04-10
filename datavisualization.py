@@ -41,7 +41,7 @@ def visualize_data():
         #a.append(fig)
         # fig.show()
         if '/' in categorical_feature:
-            categorical_feature.replace('/','_')
+            categorical_feature = categorical_feature.replace('/','_')
         fig.write_image(f"histogram_{categorical_feature}.jpg")
     for numerical_feature in numerical_features:
         fig = px.box(data, y=numerical_feature)
