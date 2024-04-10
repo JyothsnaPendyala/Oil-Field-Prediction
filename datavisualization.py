@@ -40,7 +40,7 @@ def visualize_data():
         fig.update_yaxes(showgrid=False)
         #a.append(fig)
         # fig.show()
-        fig.write_image(f"histogram_{categorical_feature}.jpg")
+        fig.write_image(f"histogram_'{categorical_feature}'.jpg")
     for numerical_feature in numerical_features:
         fig = px.box(data, y=numerical_feature)
         fig.update_layout(template='plotly_dark')
